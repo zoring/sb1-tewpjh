@@ -1,0 +1,115 @@
+/* Weapon Icons */
+.weapon-icon {
+  @apply w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-200;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.weapon-icon.active {
+  @apply ring-2 ring-blue-500 ring-offset-2 ring-offset-slate-800;
+}
+
+.weapon-icon:hover {
+  @apply transform scale-110;
+}
+
+/* Weapon Types */
+.weapon-cannon {
+  background-image: url('/weapons/cannon.png');
+}
+
+.weapon-machinegun {
+  background-image: url('/weapons/machinegun.png');
+}
+
+.weapon-plasma {
+  background-image: url('/weapons/plasma.png');
+}
+
+.weapon-missile {
+  background-image: url('/weapons/missile.png');
+}
+
+.weapon-railgun {
+  background-image: url('/weapons/railgun.png');
+}
+
+.weapon-shotgun {
+  background-image: url('/weapons/shotgun.png');
+}
+
+/* Projectile Effects */
+.projectile {
+  @apply absolute rounded-full;
+  transform: translate(-50%, -50%);
+}
+
+.projectile-cannon {
+  @apply bg-yellow-500;
+  width: 6px;
+  height: 6px;
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.5);
+}
+
+.projectile-machinegun {
+  @apply bg-orange-500;
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.5);
+}
+
+.projectile-plasma {
+  @apply bg-blue-400;
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.7);
+}
+
+.projectile-missile {
+  @apply bg-red-500;
+  width: 8px;
+  height: 12px;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+}
+
+.projectile-railgun {
+  @apply bg-purple-500;
+  width: 4px;
+  height: 20px;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+}
+
+.projectile-shotgun {
+  @apply bg-gray-300;
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 0 6px rgba(209, 213, 219, 0.5);
+}
+
+/* Weapon HUD */
+.weapon-hud {
+  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 
+         bg-slate-800/80 backdrop-blur-sm rounded-lg p-2 
+         border border-slate-700 flex gap-2;
+}
+
+.weapon-stats {
+  @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
+         bg-slate-800/90 backdrop-blur-sm rounded-lg p-3
+         border border-slate-700 w-48 hidden group-hover:block;
+}
+
+.weapon-stat-bar {
+  @apply h-1.5 rounded-full bg-slate-700 overflow-hidden;
+}
+
+.weapon-stat-fill {
+  @apply h-full rounded-full transition-all duration-300;
+}
+
+/* Stat Colors */
+.stat-damage { @apply bg-red-500; }
+.stat-reload { @apply bg-blue-500; }
+.stat-range { @apply bg-green-500; }
+.stat-energy { @apply bg-yellow-500; }
